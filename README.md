@@ -1,0 +1,4 @@
+Saladate
+========
+
+JavaScript saladation.
