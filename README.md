@@ -19,3 +19,4 @@ That's it.
 
 #### To-Do
 1. Add the rest of the validators to the validate method.
+2. Add solution for forms without labels & placeholders instead
