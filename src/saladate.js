@@ -29,10 +29,10 @@ var Saladate = (function() {
 				});
 
 				if (self.error.presence !== false) {
-          return true;
-        } else {
-          return false;
-        };
+					return true;
+				} else {
+					return false;
+				};
 			});
 
 			// Global handler
@@ -54,18 +54,18 @@ var Saladate = (function() {
 
 				case "email":
 					if (self.email(el.val()) === false) {
-			      self.error.message(el, "Please enter your " + $('label[for="' + el.attr('name') + '"]').text() + ".");
-			    } else {
-			    	self.error.reset();
-			    };
+						self.error.message(el, "Please enter your " + $('label[for="' + el.attr('name') + '"]').text() + ".");
+					} else {
+						self.error.reset();
+					};
 					break;
 
 				case "presence":
 					if (self.presence(el.val()) === false) {
-			      self.error.message(el, "Please enter your " + $('label[for="' + $(el).attr('name') + '"]').text() + ".");
-			    } else {
-			    	self.error.reset();
-			    };
+						self.error.message(el, "Please enter your " + $('label[for="' + $(el).attr('name') + '"]').text() + ".");
+					} else {
+						self.error.reset();
+					};
 					break;
 			};
 		},
@@ -95,44 +95,44 @@ var Saladate = (function() {
 		// @ccnum	- Credit card number
 		creditCard : function(identifier) {
 			var sum     = 0,
-	        alt     = false,
-	        i       = identifier.length-1,
-	        num;
+					alt     = false,
+					i       = identifier.length-1,
+					num;
 
-		    if (identifier.length < 13 || identifier.length > 19){
-		        return false;
-		    };
+				if (identifier.length < 13 || identifier.length > 19){
+						return false;
+				};
 
-		    while (i >= 0){
-		        //get the next digit
-		        num = parseInt(identifier.charAt(i), 10);
-		        //if it's not a valid number, abort
-		        if (isNaN(num)){
-		            return false;
-		        };
-		        //if it's an alternate number...
-		        if (alt) {
-		            num *= 2;
-		            if (num > 9){
-		                num = (num % 10) + 1;
-		            }
-		        };
-		        //flip the alternate bit
-		        alt = !alt;
-		        //add to the rest of the sum
-		        sum += num;
-		        //go to next digit
-		        i--;
-		    };
-		    //determine if it's valid
-		    return (sum % 10 == 0);
+				while (i >= 0){
+						//get the next digit
+						num = parseInt(identifier.charAt(i), 10);
+						//if it's not a valid number, abort
+						if (isNaN(num)){
+								return false;
+						};
+						//if it's an alternate number...
+						if (alt) {
+								num *= 2;
+								if (num > 9){
+										num = (num % 10) + 1;
+								}
+						};
+						//flip the alternate bit
+						alt = !alt;
+						//add to the rest of the sum
+						sum += num;
+						//go to next digit
+						i--;
+				};
+				//determine if it's valid
+				return (sum % 10 == 0);
 		},
 
 		// Validate Email
 		// @email - Email to validate, pass $('input[name="example"]').val()
 		email : function(email) {
-		    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		    return re.test(email);
+				var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				return re.test(email);
 		},
 		error : {
 
@@ -175,8 +175,8 @@ var Saladate = (function() {
 			}
 		},
 		forEach: function(array, fn) {
-		  for (i = 0; i < array.length; i++)
-		    fn(array[i], i);
+			for (i = 0; i < array.length; i++)
+				fn(array[i], i);
 		},
 		month : function(input) {
 			if (input === "MM") {
