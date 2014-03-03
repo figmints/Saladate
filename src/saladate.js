@@ -195,6 +195,14 @@ var Saladate = (function() {
 				return true;
 			}
 		},
+		phone : function(input){
+		  var phone = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+		  if((input.match(phone)) {
+      	return true;
+			} else {
+        return false;
+      }
+		},
 		presence : function(input) {
 			if(input === "") {
 				return false;
