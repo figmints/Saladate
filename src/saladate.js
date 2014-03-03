@@ -28,11 +28,7 @@ var Saladate = (function() {
 					self.validate($(this));
 				});
 
-				if (self.error.presence !== false) {
-					return true;
-				} else {
-					return false;
-				};
+				return false;
 			});
 
 			// Global handler
