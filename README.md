@@ -5,9 +5,9 @@ JavaScript saladation.
 
 ### Basic Usage
 HTML
-`<form id="some-form">`
-  `<label for="name[last]">Last Name <span>*</span></label>`
-  `<input saladate="presence" type="text" name="name[last]" />`
+`<form id="some-form">`<br/>
+&nbsp;&nbsp;`<label for="name[last]">Last Name <span>*</span></label>`<br/>
+&nbsp;&nbsp;`<input saladate="presence" type="text" name="name[last]" />`<br/>
 `</form>`
 
 JS
