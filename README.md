@@ -4,7 +4,7 @@ Saladate
 JavaScript saladation.
 
 ### Basic Usage
-HTML
+HTML</br>
 `<form id="some-form">`<br/>
 &nbsp;&nbsp;`<label for="name[last]">Last Name <span>*</span></label>`<br/>
 &nbsp;&nbsp;`<input saladate="presence" type="text" name="name[last]" />`<br/>
