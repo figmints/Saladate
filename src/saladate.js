@@ -32,9 +32,10 @@ var Saladate = (function() {
 			});
 
 			// Global handler
-			$('[saladate]').on('blur, keyup', function() {
-				self.validate($(this));
-			});
+			// Need to update
+			// $('[saladate]').on('blur, keyup', function() {
+			// 	self.validate($(this));
+			// });
 		},
 		validate : function(el) {
 			var self = this;
