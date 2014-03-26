@@ -44,24 +44,18 @@ var Saladate = (function() {
 				case "ccv":
 					if (self.ccv(el.val()) === false) {
 						self.error.message(el, "Your ccv number appears to be wrong.");
-					} else {
-						self.error.reset();
 					};
 					break;
 
 				case "email":
 					if (self.email(el.val()) === false) {
 						self.error.message(el, "Please enter your " + $('label[for="' + el.attr('name') + '"]').text() + ".");
-					} else {
-						self.error.reset();
 					};
 					break;
 
 				case "presence":
 					if (self.presence(el.val()) === false) {
 						self.error.message(el, "Please enter your " + $('label[for="' + $(el).attr('name') + '"]').text() + ".");
-					} else {
-						self.error.reset();
 					};
 					break;
 			};
